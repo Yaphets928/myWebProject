@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+/*main先给一个相对定位，因为瀑布流原理是加载图片的时候 所有图片的位置是通过计算通过绝对定位来确定位置的*/
+/*所以main要给一个相对定位*/
+#main{
+    position:relative;
+}
+/*box只需要定义一个属性 就是拉开位置*/
+.box{
+    /*推荐用padding而不是margin，因为在js中要获取每个数据块的高度的时候，是需要知道数据块多高，数据块之间距离
+    height获取的高度包括padding而不包括margin*/
+    padding:15px 0 0 15px;
+    float:left;
+}
+.pic{
+    padding:10px;
+    border:1px solid #cccccc;
+    border-radius:5px;
+    box-shadow:0 0 5px #cccccc;
+}
