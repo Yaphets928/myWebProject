@@ -2,7 +2,6 @@
     margin:0;
     padding:0;
 }
-
 /*main先给一个相对定位，因为瀑布流原理是加载图片的时候 所有图片的位置是通过计算通过绝对定位来确定位置的*/
 /*所以main要给一个相对定位*/
 #main{
@@ -20,4 +19,8 @@
     border:1px solid #cccccc;
     border-radius:5px;
     box-shadow:0 0 5px #cccccc;
+}
+.pic img{
+    width:165px;
+    height:auto;
 }
