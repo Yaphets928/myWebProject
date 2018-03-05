@@ -1,0 +1,23 @@
+/*CSS3实现瀑布流布局 通过多栏布局*/
+#main{
+    -webkit-columns:202px;
+    -moz-columns:202px;
+    columns:202px;
+    column-gap:5px;
+
+}
+
+.box{
+    padding:10px 0 0 15px;
+}
+.pic{
+    padding:10px;
+    border:1px solid #cccccc;
+    border-radius:5px;
+    box-shadow:0 0 5px #cccccc;
+}
+.pic img{
+    display:block;
+    width:165px;
+    height:auto;
+}

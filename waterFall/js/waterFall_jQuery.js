@@ -1,5 +1,18 @@
 $(function(){
     waterFallJQ();
+    //获取后台的数据
+    var dataInt= {"data":[{"src":"0.png"},{"src":"1.png"},{"src":"2.png"},{"src":"微信图片_20180304173209.jpg"},{"src":"23.png"}]};
+    $(window).on('scroll',function(){
+        if(checkScrollSlide){
+            $.each(dataInt.data,function(key,value){
+            var oBox=$('<div></div>').addClass('box').appendTo($('#main'));
+            var oPic=$('<div></div>').addClass('pic').appendTo(oBox);
+            var oImg=$('<img />').attr('src','img/'+$(value).attr('src'));
+            oImg.appendTo($(oPic));
+            });
+            waterFallJQ();
+        }
+    });
 });
 
 function waterFallJQ(){
@@ -13,6 +26,28 @@ function waterFallJQ(){
     var heightArr =[];
     //jq中遍历可以用$.each
     $boxes.each(function(index,value){
-        console.log(index);
+        var height=$boxes.eq(index).outerHeight();
+        if(index<cols){
+            heightArr[index]=height;
+        }else{
+            var minH=Math.min.apply(null,heightArr);
+            var minHIndex = $.inArray(minH,heightArr);
+            //value保存的是每一个div对象 value要转jq对象
+            $(value).css({
+                'position':'absolute',
+                'top':minH+'px',
+                'left':minHIndex*widthPerBox+'px',
+            });
+            heightArr[minHIndex]+=$boxes.eq(index).outerHeight();
+        }
+
     });
+}
+function checkScrollSlide(){
+    var $lastBox = $('.box').last;
+    var lastBoxTopHalf = $lastBox.offset().top+Math.floor($lastBox.outerHeight()/2);
+    var scrollTop = $(window).scrollTop();
+    var documentH = $(window).height();
+    return (lastBoxTopHalf < scrollTop+documentH);
+
 }
