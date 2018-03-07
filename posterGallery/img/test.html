@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>A Centred Company</title>
+    <style>
+        #parent {height: 500px;
+            width:250px;
+            border:1px solid black;}
+        #floater {
+            border:1px solid red;
+            float: left;
+            height: 50%;
+            width: 100%;
+            margin-bottom: -50px;
+        }
+        #child {
+            clear: both;
+            height: 100px;
+            border:1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="floater"></div>
+        <div id="child">Content here</div>
+    </div>
+</body>
+</html>
