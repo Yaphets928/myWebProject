@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <title>超炫的散列画廊特效</title>
     <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body onselectstart="return false;">
 <!--onselectstart="return false;禁止选中-->
-<div class="wrap">
+<!--wrap为模板-->
+    <div id="wrap" class="wrap">
 
-    <div class="photo">
-        <div class="side side-front">
-            <p class="image"><img src="img/1.png"/></p>
-            <p class="caption">塞尔达传说</p>
-        </div>
-        <div class="side side-back">
-            <p class="desc">任天堂是世界的猪仔</p>
+        <div  class="photo photo_front" id="photo_{{index}}" onclick="turn(this)">
+            <!--photo-wrap负责平移 旋转，photo负责3d正反面-->
+            <div class="photo-wrap">
+                <div class="side side-front">
+                    <p class="image"><img src="img/{{img}}"/></p>
+                    <p class="caption">{{caption}}</p>
+                </div>
+                <div class="side side-back">
+                    <p class="desc">{{desc}}</p>
+                </div>
+            </div>
         </div>
 
 
     </div>
 
 
-</div>
-
-
 </body>
 </html>
+<script src="js/data.js"></script>
+<script src="js/js.js"></script>

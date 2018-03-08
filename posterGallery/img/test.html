@@ -6,25 +6,17 @@
         #parent {height: 500px;
             width:250px;
             border:1px solid black;}
-        #floater {
-            border:1px solid red;
-            float: left;
-            height: 50%;
-            width: 100%;
-            margin-bottom: -50px;
-        }
-        #child {
-            clear: both;
-            height: 100px;
-            border:1px solid green;
-        }
+
     </style>
 </head>
 
 <body>
-    <div id="parent">
-        <div id="floater"></div>
-        <div id="child">Content here</div>
+    <div id="parent" class="pp cc">
+        <div class="cc"></div>
     </div>
 </body>
 </html>
+<script>
+    let m = document.getElementsByClassName("cc");
+    alert(m[0].id);
+</script>
