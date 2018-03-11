@@ -1,0 +1,90 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline:0;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: #00334B;
+    color:white;
+}
+.container{
+    width: 700px;
+    margin:0 auto;
+    text-align: center;
+}
+h1{
+    /*text-align:center;*/
+    margin:20px auto;
+}
+.add-task{
+    height:35px;
+}
+.task-content,button{
+    padding:10px 0;
+    border-radius:3px;
+    border:none;
+}
+.add-task .task-content{
+    width:84%;
+    margin-right:1%;
+    float:left;
+    display:inline-block;
+    height:35px;
+    /*line-height:30px;*/
+}
+button{
+    width:15%;
+    background: #0E98DA;
+    cursor:pointer;
+}
+.button:hover{
+    background-color: #01547B;
+}
+.task-list{
+    width:100%;
+    margin-top:10px;
+    text-align: left;
+
+}
+.task-item{
+    padding:10px;
+    background-color: white;
+    border-radius: 3px;
+    color:black;
+    margin-bottom:2px;
+}
+.task-item:hover{
+    cursor:pointer;
+    background:#ddd;
+}
+.item-content{
+    margin-left:15px;
+}
+.floatright{
+    float:right;
+    font-size:14px;
+
+}
+.floatright .action{
+    color:#888;
+
+}
+.detail{
+    cursor:pointer;
+}
+.detail:hover{
+    color:black;
+}
+.delete{
+    cursor:pointer;
+}
+.delete:hover{
+    color:black;
+}
+
+
+
